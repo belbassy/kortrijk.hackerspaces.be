@@ -1,1 +1,62 @@
-hello
+<!DOCTYPE html>
+<html>
+<title>Hack in this Space</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif;text-shadow: 2px 2px #000000;}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('house.png');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+div#contact p, div#menu p, div#menu h5{text-shadow:none;}
+</style>
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p>Hack <sup>in&nbsp;this</sup> Space</p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">contact</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Friday- Sunday 9-11 March or Friday - Sunday 14-18 March</p>
+    <p class="w3-large">Kortrijk</p>
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>What are we going to do?</h1>
+    </div>
+    <div class="w3-container">
+      <p>The idea is to come together with a bunch of hackers and work on our existing our new projects together.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact</h1>
+    </div>
+    <div class="w3-container">
+      <p>Just drop me an email at <a href="mailto:cguoeszj34qqip0@jetable.org">cguoeszj34qqip0@jetable.org</a></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
