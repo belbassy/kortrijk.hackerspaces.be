@@ -1,62 +1,311 @@
 <!DOCTYPE html>
 <html>
-<title>Hack in this Space</title>
+<title>Hack in this Space!</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h5 {font-family: "Raleway", sans-serif;text-shadow: 2px 2px #000000;}
-body, html {height: 100%}
-.bgimg {
-    background-image: url('house.png');
-    min-height: 100%;
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
     background-position: center;
     background-size: cover;
+    background-image: url("house.png");
+    min-height: 100%;
 }
-div#contact p, div#menu p, div#menu h5{text-shadow:none;}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+.hits-shadow{
+    text-shadow: 2px 2px 5px #000000;
+}
 </style>
 <body>
 
-<div class="bgimg w3-display-container w3-text-white">
-  <div class="w3-display-middle w3-jumbo">
-    <p>Hack <sup>in&nbsp;this</sup> Space</p>
-  </div>
-  <div class="w3-display-topleft w3-container w3-xlarge">
-    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
-    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">contact</button></p>
-  </div>
-  <div class="w3-display-bottomleft w3-container">
-    <p class="w3-xlarge">Friday- Sunday 16, 17, 18 March</p>
-    <p class="w3-large">Broelkaai 6 Kortrijk</p>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Hack <sup>in&nbsp;this</sup> Space!</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#whois" class="w3-bar-item w3-button"><i class="fa fa-user"></i> WHO ARE WE?</a>
+      <a href="#pictures" class="w3-bar-item w3-button"><i class="fa fa-th"></i> PICTURES</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 </div>
 
-<!-- Menu Modal -->
-<div id="menu" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black w3-display-container">
-      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
-      <h1>What are we going to do?</h1>
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#whois" onclick="w3_close()" class="w3-bar-item w3-button">WHO ARE WE?</a>
+  <a href="#pictures" onclick="w3_close()" class="w3-bar-item w3-button">PICTURES</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-middle w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small hits-shadow">Hack <sup>in&nbsp;this</sup> Space!</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium hits-shadow">Hack <sup>in&nbsp;this</sup> Space!</span><br><!-- mobile -->
+    <span class="w3-xxlarge w3-hide-small hits-shadow">A free hackathon in Kortrijk <br /> Friday - Sunday 16, 17, 18 March.</span>
+    <span class="w3-large w3-hide-large w3-hide-medium hits-shadow">A free hackathon in Kortrijk <br /> Friday - Sunday 16, 17, 18 March.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-hover-opacity-off">Learn more</a></p>
+  </div> 
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+    <h3 class="w3-center">What's going on?</h3>
+    <p class="w3-center w3-large w3-hide-small">
+        Almost the whole house available and for us to hack in! <br />
+        Take over a room, be creative, tinker, work on a project you've been wanting to work on, <br />
+        show off your cool inventions or projects, meet interesting people, brainstorm, relax and enjoy!
+    </p>
+    <p class="w3-center w3-large w3-hide-large w3-hide-medium">
+        Almost the whole house available and for us to hack in! 
+        Take over a room, be creative, tinker, work on a project you've been wanting to work on, 
+        show off your cool inventions or projects, meet interesting people, brainstorm, relax and enjoy!
+    </p>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-lightbulb-o w3-margin-bottom w3-jumbo w3-center"></i>
+      <p class="w3-large">Project time!</p>
+      <p>Bring your projects! Be it soldering, programming, painting, ... <br />
+      Do you want to show your project? Do you want some feedback? Do you need some inspiration? This is the place to be!
+      </p>
     </div>
-    <div class="w3-container">
-      <p>The idea is to come together with a bunch of hackers and work on our existing our new projects together.</p>
+    <div class="w3-quarter">
+      <i class="fa fa-flag w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Capture the flag (CTF)</p>
+      <p>Capture the Flag (CTF) is a computer security competition. CTF contests are usually designed to serve as an educational exercise to give participants experience in securing a machine, as well as conducting and reacting to the sort of attacks found in the real world. Reverse-engineering, network sniffing, protocol analysis, system administration, programming, and cryptanalysis are all skills which might come in handy.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-drivers-license-o w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Hack the Fri3d badge</p>
+      <p>Every proper hacker camp has a badge, so does Fri3d Camp! Explore how to hack <a href="https://github.com/Fri3dCamp/badge">this badge</a> together with Tom.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-magic w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Sewing workshop</p>
+      <p>In the workshop you'll be making your own teddy bear. <a href="sewing-workshop.jpg">This one</a> to be precise. For this workshop we kindly ask 10 to 15 Euro for the material. All material including sewing machines will be provided. Of cource you get to keep the teddy bear!</p>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-puzzle-piece w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">LEGO room</p>
+      <p>Who doesn't like LEGO? There will be a room dedicated to LEGO, blocks and trains included. You can build whatever you want alone or together with others. To prevent mixing LEGO collections: don't take any LEGO pieces in or out the room, there will be plenty of bricks around!</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-gamepad w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Retro games</p>
+      <p>There will be some old school consoles and emulators to play with.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-street-view w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Dance Dance Revolution</p>
+      <p>Players stand on a "dance platform" or stage and hit colored arrows laid out in a cross with their feet to musical and visual cues. Players are judged by how well they time their dance to the patterns presented to them and are allowed to choose more music to play to if they receive a passing score..</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-desktop w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">LAN-party</p>
+      <p>Friday - Sunday. Bring your own pc. Don't forget to update your game(s) and/or Steam library before you come! If you don't have any games we'll point you to some open source games :)</p>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-center" style="margin-top:64px">
+    <div class="w3-quarter">
+      <i class="fa fa-music w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">make musical instruments for the Superficial Symphony Orchestra</p>
+      <p>Explenation to be updated. But multiple people are adding electronics to some music instruments so they can all play the same song together, electronically.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-film w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Movie time</p>
+      <p>Let's watch some short movies, the darkest corners of youtube of something else random. If we're lucky we can even do this in the movie theater next door!</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-heartbeat w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Keep talking and nobody explodes game</p>
+      <p>One player as the "Defuser", playing the game on a computer, 
+      and the other player as the "Experts" reading the provided bomb defusal manual. 
+      As designed, the Defuser cannot look at the manual and must rely on the Expert to instruct him or her; likewise, 
+      the Expert cannot see the bomb and must rely on the Defuser to describe the bomb to them.</p>
+    </div>
+    <div class="w3-quarter">
+      <i class="fa fa-certificate w3-margin-bottom w3-jumbo"></i>
+      <p class="w3-large">Laser tag</p>
+      <p>Since there are multiple large empty buildings and a garden, it would be a shame not to play laser tag! We'll be renting some equipment which you can borrow for free. Donations welcome but not mandatory.</p>
     </div>
   </div>
 </div>
 
-<!-- Contact Modal -->
-<div id="contact" class="w3-modal">
-  <div class="w3-modal-content w3-animate-zoom">
-    <div class="w3-container w3-black">
-      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
-      <h1>Contact</h1>
+<div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-row-padding">
+    <div class="w3-col m6">
+      <h3>The building.</h3>
+      <p>The building is generously lend to us by VZW Buda.</p>
+      <p>We can do, within reason, whatever we want in there! So let's all be excellent and leave it tidier then it was!</p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View pictures of the building</a></p>
     </div>
-    <div class="w3-container">
-      <p>Just drop me an email at <a href="mailto:cguoeszj34qqip0@jetable.org">cguoeszj34qqip0@jetable.org</a></p>
+    <div class="w3-col m6">
+      <img class="w3-image w3-round-large" src="house.png" alt="Building" width="700">
     </div>
   </div>
 </div>
+
+<div class="w3-container" style="padding:128px 16px" id="whois">
+  <h3 class="w3-center">WHO ARE WE?</h3>
+  <p class="w3-center w3-large">Just a bunch of people.</p>
+    <p class="w3-center w3-large w3-hide-small">
+        We are mostly a some members from different <a href="https://hackerspaces.be">hackerspaces</a> who in a very short time will make this an awesome hackathon!
+    </p>
+</div>
+
+
+
+
+<div class="w3-container" style="padding:128px 16px" id="pictures">
+  <h3 class="w3-center">PICTURES</h3>
+  <p class="w3-center w3-large">Think of the possibilities!</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="foto(1).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="So much space!">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="foto(2).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="So much space!">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="foto(3).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="So much space!">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="foto(4).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="So much space!">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="foto(5).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="So much space!">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="foto(6).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="So much space!">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="foto(7).jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="So much space!">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="orangerie.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The orangerie">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Broelkaai 6 Kortrijk</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: 9ybd588uizea9sx@jetable.org</p>
+      <br>
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdSjekaN7qx3VFLJ3skNYrdrgi_YKFMWNSB0Uafh1TNSg-ilA/formResponse?usp=pp_url" target="_blank" method="GET">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="entry.1925658282"></p>
+        <p><input class="w3-input w3-border" type="email" placeholder="Email" required name="entry.1756543044"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="entry.178680770"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="entry.1354732947"></p>
+        <p>
+          <button class="w3-button w3-black" type="submit" name="submit" value="Submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+    </div>
+    <div class="w3-half">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-greyscale-max" style="width:100%;height:510px;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(50.830731, 3.266405);
+  var mapOptions= {
+    center:myCenter,
+    zoom:18, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAokyj_dSIq_9p02zJ6jhmc6OUIrHqk74c&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
 
 </body>
 </html>
